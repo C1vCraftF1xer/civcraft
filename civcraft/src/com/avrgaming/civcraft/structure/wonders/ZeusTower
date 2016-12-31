@@ -27,12 +27,14 @@ public class TowerOfZeus extends Wonder {
 
 	@Override
 	protected void removeBuffs() {
-		removeBuffFromTown(this.getTown(), "buff_zeus_range");
+		removeBuffFromCiv(this.getTown(), "buff_zeus_range");
+                removeBuffFromCiv(this.getCiv(), "buff_zeus_tower_regen_rate");
 	}
 
 	@Override
 	protected void addBuffs() {		
-		addBuffToTown(this.getTown(), "buff_zeus_range");
+		addBuffToCiv(this.getTown(), "buff_zeus_range");
+                addBuffToCiv(this.getTown(), "buff_zeus_tower_regen_rate");
 	}
 	
 	@Override
