@@ -407,6 +407,12 @@ public abstract class Wonder extends Buildable {
 				wonder = new Battledome(rs);
 			}
 			break;
+                case "w_towerofzeus":
+			if (rs == null) {
+				wonder = new TowerOfZeus(center, id, town);
+			} else {
+				wonder = new TowerOfZeus(rs);
+			}
 		default:
 			throw new CivException(CivSettings.localize.localizedString("wonder_unknwon_type")+" "+id);
 		}
